@@ -3,18 +3,14 @@ package function;
 
 public class PrimesPrinter {
     private int numberOfPrimes;
-    private int linesPerPage;
-    private int columns;
     private int[] primes;
 
-    public PrimesPrinter(int numberOfPrimes, int linesPerPage, int columns, int... primes) {
+    public PrimesPrinter(int numberOfPrimes, int[] primes) {
         this.numberOfPrimes = numberOfPrimes;
-        this.linesPerPage = linesPerPage;
-        this.columns = columns;
         this.primes = primes;
     }
 
-    public void invoke() {
+    public void invoke(int linesPerPage, int columns) {
         int pagenumber = 1;
         int pageoffset = 1;
 
