@@ -2,7 +2,6 @@ package function;
 
 class PrimesGenerator {
 
-    private int square = 9;
     private int numberOfPrimes;
     private int ordmax;
 
@@ -17,6 +16,7 @@ class PrimesGenerator {
         int candidate = 1;
         int primeIndex = 1;
         int ord = 2;
+        int square = 9;
         primes[1] = 2;
         while (primeIndex < numberOfPrimes) {
             boolean possiblyPrime;
