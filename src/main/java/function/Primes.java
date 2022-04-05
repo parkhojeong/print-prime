@@ -1,6 +1,6 @@
 package function;
 
-public class PrintPrimes {
+public class Primes {
     private final int numberOfPrimes = 1000;
     private final int linesPerPage = 50;
     private final int columns = 4;

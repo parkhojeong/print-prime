@@ -4,10 +4,10 @@ import org.junit.Test;
 
 import java.io.IOException;
 
-public class PrintPrimesTest {
+public class PrimesTest {
     @Test
     public void
     makeSureMatchesGold() throws IOException {
-        new PrintPrimes().main(new String[0]);
+        new Primes().main(new String[0]);
     }
 }
