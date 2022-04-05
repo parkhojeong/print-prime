@@ -2,14 +2,7 @@ package function;
 
 class PrimesGenerator {
 
-    private int[] primes;
-    private int candidate;
-    private int primeIndex;
-    private boolean possiblyPrime;
-    private int ord = 2;
     private int square = 9;
-    private int n;
-    private int[] multiples;
     private int numberOfPrimes;
     private int ordmax;
 
@@ -19,12 +12,14 @@ class PrimesGenerator {
     }
 
     public int[] invoke() {
-        primes = new int[numberOfPrimes + 1];
-        multiples = new int[ordmax + 1];
-        candidate = 1;
-        primeIndex = 1;
+        int[] primes = new int[numberOfPrimes + 1];
+        int[] multiples = new int[ordmax + 1];
+        int candidate = 1;
+        int primeIndex = 1;
+        int ord = 2;
         primes[1] = 2;
         while (primeIndex < numberOfPrimes) {
+            boolean possiblyPrime;
             do {
                 candidate = candidate + 2;
                 if (candidate == square) {
@@ -32,7 +27,7 @@ class PrimesGenerator {
                     square = primes[ord] * primes[ord];
                     multiples[ord - 1] = candidate;
                 }
-                n = 2;
+                int n = 2;
                 possiblyPrime = true;
                 while (n < ord && possiblyPrime) {
                     while (multiples[n] < candidate)
