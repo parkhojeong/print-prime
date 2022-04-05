@@ -1,16 +1,17 @@
 package function;
 
 public class PrintPrimes {
+    private final int numberOfPrimes = 1000;
+    private final int linesPerPage = 50;
+    private final int columns = 4;
+    private final int ordmax = 30;
+
     public void main(String[] args) {
         new PrintPrimesHelper().invoke();
     }
 
     private class PrintPrimesHelper {
 
-        private final int numberOfPrimes = 1000;
-        private final int linesPerPage = 50;
-        private int columns = 4;
-        private int ordmax = 30;
         private int[] primes;
         private int candidate;
         private int primeIndex;
