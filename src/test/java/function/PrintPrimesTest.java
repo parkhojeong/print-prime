@@ -8,6 +8,6 @@ public class PrintPrimesTest {
     @Test
     public void
     makeSureMatchesGold() throws IOException {
-        PrintPrimes.main(new String[0]);
+        new PrintPrimes().main(new String[0]);
     }
 }
