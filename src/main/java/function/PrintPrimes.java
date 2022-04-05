@@ -7,8 +7,8 @@ public class PrintPrimes {
 
     private class PrintPrimesHelper {
 
-        private int numberOfPrimes = 1000;
-        private int linesPerPage = 50;
+        private final int numberOfPrimes = 1000;
+        private final int linesPerPage = 50;
         private int columns = 4;
         private int ordmax = 30;
         private int[] primes;
@@ -57,19 +57,19 @@ public class PrintPrimes {
         private void printPrimes(int numberOfPrimes, int linesPerPage) {
             pagenumber = 1;
             pageoffset = 1;
-            while (pageoffset <= this.numberOfPrimes) {
-                System.out.println("The First " + this.numberOfPrimes +
+            while (pageoffset <= numberOfPrimes) {
+                System.out.println("The First " + numberOfPrimes +
                         " Prime Numbers --- Page " + pagenumber);
                 System.out.println("");
                 for (rowoffset = pageoffset; rowoffset < pageoffset + linesPerPage; rowoffset++) {
                     for (column = 0; column < columns; column++)
-                        if (rowoffset + column * this.linesPerPage <= numberOfPrimes)
-                            System.out.format("%10d", primes[rowoffset + column * this.linesPerPage]);
+                        if (rowoffset + column * linesPerPage <= numberOfPrimes)
+                            System.out.format("%10d", primes[rowoffset + column * linesPerPage]);
                     System.out.println("");
                 }
                 System.out.println("\f");
                 pagenumber = pagenumber + 1;
-                pageoffset = pageoffset + this.linesPerPage * columns;
+                pageoffset = pageoffset + linesPerPage * columns;
             }
         }
     }
