@@ -1,13 +1,13 @@
 package function;
 
 
-public class Printer {
+public class PrimesPrinter {
     private int numberOfPrimes;
     private int linesPerPage;
     private int columns;
     private int[] primes;
 
-    public Printer(int numberOfPrimes, int linesPerPage, int columns, int... primes) {
+    public PrimesPrinter(int numberOfPrimes, int linesPerPage, int columns, int... primes) {
         this.numberOfPrimes = numberOfPrimes;
         this.linesPerPage = linesPerPage;
         this.columns = columns;
