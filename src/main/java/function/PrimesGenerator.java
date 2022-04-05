@@ -10,8 +10,15 @@ class PrimesGenerator {
     private int square = 9;
     private int n;
     private int[] multiples;
+    private int numberOfPrimes;
+    private int ordmax;
 
-    public int[] invoke(int numberOfPrimes, int ordmax) {
+    public PrimesGenerator(int numberOfPrimes, int ordmax) {
+        this.numberOfPrimes = numberOfPrimes;
+        this.ordmax = ordmax;
+    }
+
+    public int[] invoke() {
         primes = new int[numberOfPrimes + 1];
         multiples = new int[ordmax + 1];
         candidate = 1;
