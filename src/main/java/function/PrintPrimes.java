@@ -1,12 +1,12 @@
 package function;
 
 public class PrintPrimes {
-    public static void main(String[] args) {
-        PrintPrimesHelper.invoke();
+    public void main(String[] args) {
+        new PrintPrimesHelper().invoke();
     }
 
-    private static class PrintPrimesHelper {
-        private static void invoke() {
+    private class PrintPrimesHelper {
+        public void invoke() {
             final int numberOfPrimes = 1000;
             final int linesPerPage = 50;
             final int columns = 4;
