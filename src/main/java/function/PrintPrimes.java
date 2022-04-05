@@ -7,7 +7,8 @@ public class PrintPrimes {
     private final int ordmax = 30;
 
     public void main(String[] args) {
-        new PrintPrimesHelper().invoke();
+        int[] primes = new PrintPrimesHelper().invoke();
+        new Printer(numberOfPrimes, linesPerPage, columns, primes);
     }
 
     private class PrintPrimesHelper {
@@ -21,7 +22,7 @@ public class PrintPrimes {
         private int n;
         private int[] multiples;
 
-        public void invoke() {
+        public int[] invoke() {
             primes = new int[numberOfPrimes + 1];
             multiples = new int[ordmax + 1];
             candidate = 1;
@@ -48,11 +49,7 @@ public class PrintPrimes {
                 primeIndex = primeIndex + 1;
                 primes[primeIndex] = candidate;
             }
-            printPrimes(numberOfPrimes, linesPerPage, columns, primes);
-        }
-
-        private void printPrimes(int numberOfPrimes, int linesPerPage, int columns, int[] primes) {
-            new Printer(numberOfPrimes, linesPerPage, columns, primes).invoke();
+            return primes;
         }
 
     }
