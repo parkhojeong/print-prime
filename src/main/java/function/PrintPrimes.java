@@ -7,7 +7,7 @@ public class PrintPrimes {
     private final int ordmax = 30;
 
     public void main(String[] args) {
-        int[] primes = new PrintPrimesHelper().invoke(numberOfPrimes, ordmax);
+        int[] primes = new PrimesGenerator().invoke(numberOfPrimes, ordmax);
         new Printer(numberOfPrimes, linesPerPage, columns, primes);
     }
 

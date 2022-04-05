@@ -1,6 +1,6 @@
 package function;
 
-class PrintPrimesHelper {
+class PrimesGenerator {
 
     private int[] primes;
     private int candidate;
