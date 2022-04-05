@@ -8,7 +8,7 @@ public class Primes {
 
     public void main(String[] args) {
         int[] primes = new PrimesGenerator().invoke(numberOfPrimes, ordmax);
-        new Printer(numberOfPrimes, linesPerPage, columns, primes);
+        new Printer(numberOfPrimes, linesPerPage, columns, primes).invoke();
     }
 
 
